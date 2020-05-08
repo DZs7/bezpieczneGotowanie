@@ -47,4 +47,39 @@ public class FindRecipeApi {
         return searchURL.toString();
     }
 
+    private String getResultJSON(){
+        mErrorMessage = "";
+        StringBuilder resultJSONBuilder = new StringBuilder();
+        try {
+            URL url = new URL(this.buildSearchURL());
+            HttpsURLConnection urlConnection = (HttpsURLConnection) url.openConnection();
+            urlConnection.connect();
+            BufferedReader responseBodyReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+            if(urlConnection.getResponseCode() == HttpsURLConnection.HTTP_OK) {
+                String line;
+                while ((line = responseBodyReader.readLine()) != null)
+                    resultJSONBuilder.append(line).append("\n");
+            }
+            else{
+                mErrorMessage = urlConnection.getResponseCode() + urlConnection.getResponseMessage();
+            }
+            urlConnection.disconnect();
+            responseBodyReader.close();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return resultJSONBuilder.toString();
+    }
+
+    List<Recipe> getResult(){
+        return JSONParser.parseResultJSON(getResultJSON());
+    }
+
+    String getBuiltURL() {
+        return mBuiltURL;
+    }
+
+    String getErrorMessage() {
+        return mErrorMessage;
+    }
 }
