@@ -1,5 +1,6 @@
-package com.example.bezpiecznegotowanie;
+package com.example.bezpiecznegotowanie.utilites_search;
 
+import com.example.bezpiecznegotowanie.Recipe;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -9,7 +10,7 @@ import java.util.List;
 
 class JSONParser {
 
-    // parsowanie na plik jsonam, nie ma sensu zmieniac "uniwersalny" sposob
+
 
     private final static String JSON_KEY_RECIPE_ARRAY = "hits";
     private final static String JSON_KEY_RECIPE_OBJECT = "recipe";

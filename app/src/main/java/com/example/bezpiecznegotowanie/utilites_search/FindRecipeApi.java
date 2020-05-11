@@ -1,6 +1,7 @@
-package com.example.bezpiecznegotowanie;
+package com.example.bezpiecznegotowanie.utilites_search;
 
 import android.net.Uri;
+import com.example.bezpiecznegotowanie.Recipe;
 
 import javax.net.ssl.HttpsURLConnection;
 import java.io.BufferedReader;
