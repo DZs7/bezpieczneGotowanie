@@ -1,6 +1,6 @@
 {
 
- "project_info": {
+  "project_info": {
     "project_number": "631239448616",
     "firebase_url": "https://projekt-7fa2c.firebaseio.com",
     "project_id": "projekt-7fa2c",
@@ -11,7 +11,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:631239448616:android:0665437b136d4092747d1d",
         "android_client_info": {
-          "package_name": "bezpieczne.gotowanie"
+          "package_name": "com.example.bezpiecznegotowanie"
         }
       },
       "oauth_client": [

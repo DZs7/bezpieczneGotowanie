@@ -1,4 +1,4 @@
-package com.example.bezpiecznegotowanie;
+package com.example.chef;
 
 import org.junit.Test;
 
