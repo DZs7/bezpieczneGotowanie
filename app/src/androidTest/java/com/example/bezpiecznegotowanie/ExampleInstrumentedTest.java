@@ -1,4 +1,4 @@
-package com.example.chef;
+package com.example.bezpiecznegotowanie;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
