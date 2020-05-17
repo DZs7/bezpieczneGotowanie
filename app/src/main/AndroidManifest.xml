@@ -24,6 +24,15 @@
             android:name=".login.UserInfo"
             android:label="@string/user_info_activity_label" />
         <activity
+            android:name=".StartActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".search_result_detailed.RecipeDetails"
             android:label="@string/title_activity_recipe_detail"
             android:parentActivityName=".search_result.RecipesList"
