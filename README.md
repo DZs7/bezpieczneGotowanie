@@ -1,1 +1,1 @@
-BEzpieczne Gotowanie
+Bezpieczne Gotowanie
