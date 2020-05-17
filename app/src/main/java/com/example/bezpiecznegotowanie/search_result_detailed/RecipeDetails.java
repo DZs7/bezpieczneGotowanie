@@ -6,9 +6,9 @@ import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.chef.R;
 import com.example.bezpiecznegotowanie.Recipe;
-import com.example.bezpiecznegotowanie.search_result.FindRecepieRequest;
+import com.example.bezpiecznegotowanie.search_result.FindRecipeRequest;
+import com.example.bezpiecznegotowanie.R;
 
 public class RecipeDetails extends AppCompatActivity {
 
@@ -30,7 +30,7 @@ public class RecipeDetails extends AppCompatActivity {
         mRecipeDetailsIngredients = findViewById(R.id.recipe_details_ingredients);
         mRecipeDetailsPreparation = findViewById(R.id.recipe_details_preparation);
 
-        mRecipe = getIntent().getParcelableExtra(FindRecepieRequest.RECIPE_DETAILS);
+        mRecipe = getIntent().getParcelableExtra(FindRecipeRequest.RECIPE_DETAILS);
 
         mRecipeDetailsImage.setImageBitmap(mRecipe.getImageBitmap());
         mRecipeDetailsLabel.setText(mRecipe.getLabel());

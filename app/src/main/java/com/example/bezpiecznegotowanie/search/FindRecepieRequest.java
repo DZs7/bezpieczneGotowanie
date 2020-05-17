@@ -16,7 +16,7 @@ public class FindRecepieRequest extends AsyncTask<FindRecipeApi,Integer, List<Re
 
     private Context mContext;
 
-    public static final String RECIPES_LIST = "com.example.chef.search.RecipesSearchTask.lRecipesList";
+    public static final String RECIPES_LIST = "RecipesSearchTask.lRecipesList";
 
     FindRecepieRequest(Context context){
         super();

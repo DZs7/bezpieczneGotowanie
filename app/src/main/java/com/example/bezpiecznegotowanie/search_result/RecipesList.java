@@ -6,9 +6,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
-import com.example.chef.R;
 import com.example.bezpiecznegotowanie.Recipe;
 import com.example.bezpiecznegotowanie.search.FindRecepieRequest;
+import com.example.bezpiecznegotowanie.R;
 
 import java.util.List;
 
@@ -24,10 +24,10 @@ public class RecipesList extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         mRecipesList = getIntent().getParcelableArrayListExtra(FindRecepieRequest.RECIPES_LIST);
-        com.example.bezpiecznegotowanie.search_result.FindRecepieRequest findRecepieRequest = new com.example.bezpiecznegotowanie.search_result.FindRecepieRequest(this, mRecipesList);
+        FindRecipeRequest findRecipeRequest = new FindRecipeRequest(this, mRecipesList);
         RecyclerView recipesListView = findViewById(R.id.recipes_list);
         recipesListView.setLayoutManager(new LinearLayoutManager(this));
-        recipesListView.setAdapter(findRecepieRequest);
+        recipesListView.setAdapter(findRecipeRequest);
 
     }
 

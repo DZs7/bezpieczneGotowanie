@@ -1,5 +1,6 @@
 package com.example.bezpiecznegotowanie.search_result;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -13,33 +14,33 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.bezpiecznegotowanie.search_result_detailed.RecipeDetails;
-import com.example.chef.R;
 import com.example.bezpiecznegotowanie.Recipe;
+import com.example.bezpiecznegotowanie.R;
+import com.example.bezpiecznegotowanie.search_result_detailed.RecipeDetails;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
 
-public class FindRecepieRequest extends RecyclerView.Adapter<FindRecepieRequest.ViewHolder> {
+public class FindRecipeRequest extends RecyclerView.Adapter<FindRecipeRequest.ViewHolder> {
 
     private List<Recipe> mRecipes;
     private Context mContext;
 
-    public static final String RECIPE_DETAILS = "com.example.bezpiecznegotowanie.utilites_search.RecipesAdapter.lRecipe";
+    public static final String RECIPE_DETAILS = "com.example.bezpiecznegotowanie.search_result.FindRecipeRequest.lRecipe";
 
-    FindRecepieRequest(Context context, List<Recipe> recipes){
+    FindRecipeRequest(Context context, List<Recipe> recipes){
         this.mRecipes = recipes;
         this.mContext = context;
     }
 
     @NonNull
     @Override
-    public FindRecepieRequest.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return new FindRecepieRequest.ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.recipes_item, viewGroup, false));
+    public FindRecipeRequest.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        return new FindRecipeRequest.ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.recipes_item, viewGroup, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FindRecepieRequest.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull FindRecipeRequest.ViewHolder viewHolder, int i) {
         viewHolder.bind(mRecipes.get(i));
     }
 
@@ -66,10 +67,11 @@ public class FindRecepieRequest extends RecyclerView.Adapter<FindRecepieRequest.
         }
 
 
+        @SuppressLint("LongLogTag")
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(mContext, RecipeDetails.class);
-            Log.d("App-com.example.chef",mRecipes.get(getAdapterPosition()).getImageBitmap().toString());
+            Log.d("App-com.example.bezpiecznegotowanie",mRecipes.get(getAdapterPosition()).getImageBitmap().toString());
             intent.putExtra(RECIPE_DETAILS, mRecipes.get(getAdapterPosition()));
             mContext.startActivity(intent);
         }

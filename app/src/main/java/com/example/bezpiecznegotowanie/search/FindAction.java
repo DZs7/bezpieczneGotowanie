@@ -17,8 +17,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.chef.R;
 import com.example.bezpiecznegotowanie.login.UserInfo;
+import com.example.bezpiecznegotowanie.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -53,6 +53,10 @@ public class FindAction extends AppCompatActivity implements TextView.OnEditorAc
         mIngredients.add("Tomato");
         mIngredients.add("Onion");
         mIngredients.add("Pickle");
+        mIngredients.add("Lemon");
+        mIngredients.add("Salmon");
+        mIngredients.add("Thyme");
+        mIngredients.add("Butter");
 
         RecyclerView ingredientsRecyclerView = findViewById(R.id.ingredients_list);
         ingredientsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -63,23 +67,18 @@ public class FindAction extends AppCompatActivity implements TextView.OnEditorAc
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_user_info) {
             FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
             if(currentUser == null) {
-                displayToast("You are not logged in!");
+                displayToast("Nie jesteś zalogowany!");
                 return true;
             }
             else{
@@ -104,7 +103,7 @@ public class FindAction extends AppCompatActivity implements TextView.OnEditorAc
     }
 
     public void searchForRecipes(View view) {
-        new FindRecepieRequest(getApplicationContext()).execute(new FindRecipeApi(mIngredients,5,60));
+        new FindRecepieRequest(getApplicationContext()).execute(new FindRecipeApi(mIngredients,10,60));
     }
 
     public void displayToast(String message){
