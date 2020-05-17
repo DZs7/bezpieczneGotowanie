@@ -1,4 +1,4 @@
-package com.example.bezpiecznegotowanie.utilites_search;
+package com.example.bezpiecznegotowanie.search_result;
 
 
 

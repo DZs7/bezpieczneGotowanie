@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.chef.R;
+import com.example.bezpiecznegotowanie.R;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -44,7 +44,7 @@ public class UserInfo extends AppCompatActivity {
                 DocumentSnapshot ds = task.getResult();
                 if(ds != null) {
                     Object ob = ds.get(fp);
-                    Log.d("App-com.example.chef",ob.toString());
+                    Log.d("App-com.example.bezpiecznegotowanie",ob.toString());
                     String message = ds.get(fp).toString();
                     Toast.makeText(UserInfo.this, message, Toast.LENGTH_SHORT);
                 }

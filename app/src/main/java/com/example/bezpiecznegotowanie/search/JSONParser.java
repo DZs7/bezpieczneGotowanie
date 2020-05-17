@@ -1,4 +1,4 @@
-package com.example.bezpiecznegotowanie.utilites_result;
+package com.example.bezpiecznegotowanie.search;
 
 import com.example.bezpiecznegotowanie.Recipe;
 

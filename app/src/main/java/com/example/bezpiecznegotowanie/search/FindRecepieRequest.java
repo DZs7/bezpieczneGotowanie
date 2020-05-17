@@ -1,4 +1,4 @@
-package com.example.bezpiecznegotowanie.utilites_result;
+package com.example.bezpiecznegotowanie.search;
 
 
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.os.AsyncTask;
 import android.os.Parcelable;
 
 import com.example.bezpiecznegotowanie.Recipe;
-import com.example.bezpiecznegotowanie.utilites_search.RecipesListActivity;
+import com.example.bezpiecznegotowanie.search_result.RecipesList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +32,7 @@ public class FindRecepieRequest extends AsyncTask<FindRecipeApi,Integer, List<Re
     @Override
     protected void onPostExecute(List<Recipe> result){
         super.onPostExecute(result);
-        Intent launchRecipesList = new Intent(mContext, RecipesListActivity.class);
+        Intent launchRecipesList = new Intent(mContext, RecipesList.class);
         launchRecipesList.putParcelableArrayListExtra(RECIPES_LIST, (ArrayList<? extends Parcelable>) result)
                 .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mContext.startActivity(launchRecipesList);

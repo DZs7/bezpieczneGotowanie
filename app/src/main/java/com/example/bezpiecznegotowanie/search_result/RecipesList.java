@@ -1,4 +1,4 @@
-package com.example.bezpiecznegotowanie.utilites_search;
+package com.example.bezpiecznegotowanie.search_result;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,11 +8,11 @@ import android.support.v7.widget.Toolbar;
 
 import com.example.chef.R;
 import com.example.bezpiecznegotowanie.Recipe;
-import com.example.bezpiecznegotowanie.utilites_result.FindRecepieRequest;
+import com.example.bezpiecznegotowanie.search.FindRecepieRequest;
 
 import java.util.List;
 
-public class RecipesListActivity extends AppCompatActivity {
+public class RecipesList extends AppCompatActivity {
 
     private List<Recipe> mRecipesList;
 
@@ -24,7 +24,7 @@ public class RecipesListActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         mRecipesList = getIntent().getParcelableArrayListExtra(FindRecepieRequest.RECIPES_LIST);
-        com.example.bezpiecznegotowanie.utilites_search.FindRecepieRequest findRecepieRequest = new com.example.bezpiecznegotowanie.utilites_search.FindRecepieRequest(this, mRecipesList);
+        com.example.bezpiecznegotowanie.search_result.FindRecepieRequest findRecepieRequest = new com.example.bezpiecznegotowanie.search_result.FindRecepieRequest(this, mRecipesList);
         RecyclerView recipesListView = findViewById(R.id.recipes_list);
         recipesListView.setLayoutManager(new LinearLayoutManager(this));
         recipesListView.setAdapter(findRecepieRequest);

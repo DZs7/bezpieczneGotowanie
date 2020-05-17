@@ -1,4 +1,4 @@
-package com.example.bezpiecznegotowanie.utilites_search;
+package com.example.bezpiecznegotowanie.search_result;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.bezpiecznegotowanie.utilites_search_result_detailed.RecipeDetails;
+import com.example.bezpiecznegotowanie.search_result_detailed.RecipeDetails;
 import com.example.chef.R;
 import com.example.bezpiecznegotowanie.Recipe;
 

@@ -1,4 +1,4 @@
-package com.example.bezpiecznegotowanie.utilites_search_result_detailed;
+package com.example.bezpiecznegotowanie.search_result_detailed;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.example.chef.R;
 import com.example.bezpiecznegotowanie.Recipe;
-import com.example.bezpiecznegotowanie.utilites_search.FindRecepieRequest;
+import com.example.bezpiecznegotowanie.search_result.FindRecepieRequest;
 
 public class RecipeDetails extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.bezpiecznegotowanie.utilites_result;
+package com.example.bezpiecznegotowanie.search;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;

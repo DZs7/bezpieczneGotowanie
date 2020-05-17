@@ -1,4 +1,4 @@
-package com.example.bezpiecznegotowanie.utilites_result;
+package com.example.bezpiecznegotowanie.search;
 
 import android.content.Intent;
 import android.os.Bundle;
